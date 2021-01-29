@@ -55,7 +55,7 @@ void loop(){
 
   if (customKey == '#') {                       // when enter key is pressed
 
-    if ( 0 < in_speed < ) {
+    if ( 0 < in_speed < 255) {
       Serial.println();
       Serial.print("Fan speed has been set to ");
       Serial.println(in_speed);
