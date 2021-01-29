@@ -1,10 +1,12 @@
-// Code modified for the password-checking functionality discussed in Tutorial 1
+// Controlling the speed of the fan using the membrane keypad.
 // Hannah Knight
 
 #include <Keypad.h>
 
-const byte pinGREEN = 21;
-const byte pinRED = 14;
+
+#define ENABLE 12
+#define DIRA 10
+#define DIRB 11
 
 const byte ROWS = 4; //four rows
 const byte COLS = 4; //four columns
@@ -22,32 +24,33 @@ byte colPins[COLS] = {5, 4, 3, 2}; //connect to the column pinouts of the keypad
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); 
 
 /************************/
-// Variables for the password-checking functionality
-const int pass = 1534;           // The password
+
+const int speedFan = 0;         // Setting initial speed
 int i = 0;                      // Variable to know the position in the sequence of a pressed number
 int int_customKey = 0;          // Variable to get the integer value of the pressed number
-int in_pass = 0;                // The current password being introduced
+int in_pass = 0;                // The current speed being introduced
 int power[4] = {1000, 100, 10, 1};    // Array to get the result of 10^(2-i) when computing the integer value of the password being introduced
 /************************/
   
 void setup(){
+  //---set pin direction
+  pinMode(ENABLE,OUTPUT);
+  pinMode(DIRA,OUTPUT);
+  pinMode(DIRB,OUTPUT);
   Serial.begin(9600);
-  // initialize digital pin 14 and 21 as outputs.
-  pinMode(pinGREEN, OUTPUT);
-  pinMode(pinRED, OUTPUT);
 }
   
 void loop(){
   char customKey = customKeypad.getKey();
   
   if (customKey){
-    if (i < 4){                                   // If i < 3, more numbers to complete the password are needed
+    if (i < 3){                                   // If i < 3, more numbers to complete the password are needed
       int_customKey = customKey - '0';            // Obtaining the integer value of the pressed button. ASCII code of the pressed button minus ASCII code of character '0'.
       in_pass = in_pass + int_customKey*power[i]; // Computing the integer value of the password being introduced
       i = i+1;                                    // A button has been pressed, so the position in the sequence for the next number is updated
       Serial.print('*');                          // Sending character '*' for the serial monitor
     }
-  if (i >= 4){                                    // If i >= 3, a full password has been introduced. Time to check!
+  if (i >= 3){                                    // If i >= 3, a full password has been introduced. Time to check!
      Serial.println();
      if (in_pass == pass){                        // Is the introduced password equal to the password (pass)?
       Serial.println("Password is correct");      // The password introduced is correct. Sending info to the serial monitor
