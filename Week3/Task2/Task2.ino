@@ -21,6 +21,15 @@ int redValue;
 int greenValue;
 int blueValue;
 
+// For the calibrator
+int sensorValue = 0;         // the sensor value
+int sensorMin = 500;        // minimum sensor value
+int sensorMax = 700;           // maximum sensor value
+/*
+ * These may seem backwards. Initially, you set the minimum high and read for anything lower than that, saving 
+ * it as the new minimum.
+ */
+
                               
 
 void setup()
@@ -37,67 +46,49 @@ void setup()
   digitalWrite(RED, HIGH);
   digitalWrite(GREEN, LOW);
   digitalWrite(BLUE, LOW);
+
+  // For the callibrator
+  // calibrate during the first 7 seconds
+  while (millis() < 7000) {
+    sensorValue = analogRead(sensorAnalogPin);
+
+    // record the maximum sensor value
+    if (sensorValue > sensorMax) {
+      sensorMax = sensorValue;
+    }
+
+    // record the minimum sensor value
+    if (sensorValue < sensorMin) {
+      sensorMin = sensorValue;
+    }
+  // signal the end of the calibration period
+  digitalWrite(13, LOW);
+  }
 }
 
 void loop(){
 
   
   analogValue = analogRead(sensorAnalogPin); // Read the value of the analog interface A0 assigned to digitalValue 
-  digitalValue=digitalRead(sensorDigitalPin); // Read the value of the digital interface 12 assigned to digitalValue 
-  Serial.println(analogValue); // Send the analog value to the serial transmit interface
+  digitalValue=digitalRead(sensorDigitalPin); // Read the value of the digital interface 12 assigned to digitalValue -> goes between 1 and 0 (high and low)
+  //Serial.println(analogValue); // Send the analog value to the serial transmit interface
 
+  // calibrate
+  // apply the calibration to the sensor reading
+  sensorValue = map(analogValue, sensorMin, sensorMax, 0, 255);
 
-  if ( 565 < analogValue < 569) {
-    redValue = 0;
-    greenValue = 255;
+  // in case the sensor value is outside the range seen during calibration
+  //sensorValue = constrain(analogValue, 0, 255);
+  Serial.println(sensorValue);
+
+  if ( -1 < sensorValue < 266) {
+    redValue = sensorValue;
+    greenValue = 255 - sensorValue;
     analogWrite(RED, redValue);
     analogWrite(GREEN, greenValue);
   }
 
-  if ( 568 < analogValue < 572) {
-      redValue = 35;
-      greenValue = 210;
-      analogWrite(RED, redValue);
-      analogWrite(GREEN, greenValue);
-  }
 
-  if ( 571 < analogValue < 574) {
-      redValue = 70;
-      greenValue = 175;
-      analogWrite(RED, redValue);
-      analogWrite(GREEN, greenValue);
-  }
-
-  if ( 575 < analogValue < 578) {
-      redValue = 105;
-      greenValue = 140;
-      analogWrite(RED, redValue);
-      analogWrite(GREEN, greenValue);
-
-  }
-
-  if ( 580 < analogValue < 584) {
-      redValue = 175;
-      greenValue = 70;
-      analogWrite(RED, redValue);
-      analogWrite(GREEN, greenValue);
-  }
-
-  if ( 583 < analogValue < 587) {
-      redValue = 210;
-      greenValue = 35;
-      analogWrite(RED, redValue);
-      analogWrite(GREEN, greenValue);
-
-  }
-
-  if ( 586 < analogValue < 590) {
-      redValue = 255;
-      greenValue = 0;
-      analogWrite(RED, redValue);
-      analogWrite(GREEN, greenValue);
-  }
-  
   if(digitalValue==HIGH)      // When the Sound Sensor sends signals, via voltage present, light LED13 (L)
   {
     digitalWrite(Led13,HIGH);

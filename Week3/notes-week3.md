@@ -52,3 +52,5 @@ Overall, this task was quite challenging and difficult to measure how successful
 ## Task 2
 
 **Files** Task2.ino <br />
+
+I struggled getting the sound sensor to be sensitive enough to detect me solely speaking. However, it performed well when I blew on it, changing colour appropriately.
