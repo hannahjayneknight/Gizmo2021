@@ -142,5 +142,4 @@ NB: The following website was used to calculate the linear regression: http://ww
 
 **Conclusion:** The utrasonic sensor is extremely accurate! <br />
 
-Although the expected linear regression line was ![formula](https://render.githubusercontent.com/render/math?math=distance=0.0017*time), the calculated one of ![formula](https://render.githubusercontent.com/render/math?math=distance=0.0165*time-0.2097) (which has been rounded) is only marginally incorrect.
-
+Although the expected linear regression line was ![formula](https://render.githubusercontent.com/render/math?math=distance=0.0017*time), the calculated one of ![formula](https://render.githubusercontent.com/render/math?math=distance=0.0165*time-0.2097) (which has been rounded) is only marginally incorrect. This means the sensor has a high precision.
