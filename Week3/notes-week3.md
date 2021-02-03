@@ -94,4 +94,12 @@ long SR04::MicrosecondsToCentimeter(long duration) {
 | 686                            | 686                            | 686                            | 686.00                       | 11            |
 | 717                            | 716                            | 723                            | 718.66                       | 12            |
 
+**Setup:** Books were used to place the object (to be measured) and the sensor (taking the measurements) at right angles. This ensured the readings were as accurate as possible (given the circumstances of completing the practical at home).
+
+<img src="setup.jpg"
+     alt="Setup"
+     />
+
+**Video example of me taking a reading at 2cm:** 
+
 **Conclusion:** The utrasonic sensor is surprisingly accurate!
