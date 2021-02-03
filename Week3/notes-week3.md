@@ -79,4 +79,19 @@ long SR04::MicrosecondsToCentimeter(long duration) {
     return d;
 }
 ```
+**Results:**
+| Time reading 1 (micro-seconds) | Time reading 2 (micro-seconds) | Time reading 3 (micro-seconds) | Average time (micro-seconds) | Distance (cm) |
+|--------------------------------|--------------------------------|--------------------------------|------------------------------|---------------|
+| 178                            | 178                            | 178                            | 178.00                       | 2             |
+| 181                            | 181                            | 181                            | 181.00                       | 3             |
+| 241                            | 241                            | 242                            | 241.33                       | 4             |
+| 289                            | 289                            | 289                            | 289.00                       | 5             |
+| 365                            | 370                            | 364                            | 366.33                       | 6             |
+| 428                            | 431                            | 431                            | 430.00                       | 7             |
+| 508                            | 515                            | 508                            | 510.33                       | 8             |
+| 571                            | 566                            | 572                            | 569.66                       | 9             |
+| 628                            | 628                            | 628                            | 628.00                       | 10            |
+| 686                            | 686                            | 686                            | 686.00                       | 11            |
+| 717                            | 716                            | 723                            | 718.66                       | 12            |
 
+**Conclusion:** The utrasonic sensor is surprisingly accurate!
