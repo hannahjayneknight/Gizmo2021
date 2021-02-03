@@ -66,11 +66,28 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
 
 ## Task 3
 
-**Files**  SR04.cpp, SR04_Example_NR.ino <br />
+**Files:**  SR04.cpp, SR04_Example_NR.ino <br />
 
-Sensor characterization is when you find a function (or set of functions) that map physical values to sensor readings. This task uses an ultrasonic sensor to explore this concept. <br />
+**Introduction:** Sensor characterization is when you find a function (or set of functions) that map physical values to sensor readings. This task uses an ultrasonic sensor to explore this concept. <br />
 
-Note that the implementation of the method Distance() can be found in the _SR04.cpp_ file and the specific method MicrosecondsToCentimeter() that is used can be seen below.
+**How the library computes the distance from time measured:** To calculate the distance between the object and the sensor, the HC-SR04 library manipulates the well-known ![formula](https://render.githubusercontent.com/render/math?math=speed=distance/time) formula. <br />
+
+The distance we are interested in is half the distance that the ultrasonic wave travels (which goes to the object and back again). The HC-SR04 library takes the speed of sound to be ![formula](https://render.githubusercontent.com/render/math?math=340m^{-1}). Time is measured in microseconds = ![formula](https://render.githubusercontent.com/render/math?math=10^{-6}). <br />
+
+Putting together all of the above gives the following:
+
+![formula](https://render.githubusercontent.com/render/math?math=distance=time*10^{-6}*340/2) (in m) <br />
+
+Which simplifies to:
+
+![formula](https://render.githubusercontent.com/render/math?math=distance=0.00017*time) (in m) <br />
+
+Or:
+
+![formula](https://render.githubusercontent.com/render/math?math=distance=0.0017*time) (in cm) <br />
+
+
+Specifically, the method MicrosecondsToCentimeter() that is used can be seen below. <br />
 
 ```
 long SR04::MicrosecondsToCentimeter(long duration) {
@@ -79,8 +96,19 @@ long SR04::MicrosecondsToCentimeter(long duration) {
     return d;
 }
 ```
+**The experiment:** In this practical, the ultrasonic sensor was used to measure how far away a textbook was.
+
+**Setup:** Other books were used to place the textbook (to be measured) and the sensor (taking the measurements) at right angles to each other and to the ruler. This ensured the readings were as accurate as possible (given the circumstances of completing the practical at home).
+
+<img src="setup.jpg"
+     alt="Setup"
+     />
+
+**Video example of me taking a reading at 2cm:** https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week3/2cm-reading.mp4 <br />
+
+
 **Results:**
-| Time reading 1 (micro-seconds) | Time reading 2 (micro-seconds) | Time reading 3 (micro-seconds) | Average time (micro-seconds) | Distance (cm) |
+| Time reading 1 (micro-seconds) | Time reading 2 (micro-seconds) | Time reading 3 (micro-seconds) | Average time (micro-seconds) | Distance set (cm) |
 |--------------------------------|--------------------------------|--------------------------------|------------------------------|---------------|
 | 178                            | 178                            | 178                            | 178.00                       | 2             |
 | 181                            | 181                            | 181                            | 181.00                       | 3             |
@@ -94,12 +122,25 @@ long SR04::MicrosecondsToCentimeter(long duration) {
 | 686                            | 686                            | 686                            | 686.00                       | 11            |
 | 717                            | 716                            | 723                            | 718.66                       | 12            |
 
-**Setup:** Books were used to place the object (to be measured) and the sensor (taking the measurements) at right angles. This ensured the readings were as accurate as possible (given the circumstances of completing the practical at home).
+| Sample size | Mean x (x̄) | Mean y (ȳ) |
+|-------------|------------|------------|
+| 11          | 436.21     | 7          |
 
-<img src="setup.jpg"
-     alt="Setup"
+**Regression line of the data:** <br />
+
+[//]: #y=0.016527999408284x-0.20967862188755
+
+![formula](https://render.githubusercontent.com/render/math?math=y=0.016527999408284x-0.20967862188755) <br />
+
+NB: The following website was used to calculate the linear regression: http://www.alcula.com/calculators/statistics/linear-regression/#gsc.tab=0 <br />
+
+<img src="Task3-linear-regression.png"
+     alt="Regression line"
      />
 
-**Video example of me taking a reading at 2cm:** 
 
-**Conclusion:** The utrasonic sensor is surprisingly accurate!
+
+**Conclusion:** The utrasonic sensor is extremely accurate! <br />
+
+Although the expected linear regression line was ![formula](https://render.githubusercontent.com/render/math?math=distance=0.0017*time), the calculated one of ![formula](https://render.githubusercontent.com/render/math?math=distance=0.0165*time-0.2097) (which has been rounded) is only marginally incorrect.
+
