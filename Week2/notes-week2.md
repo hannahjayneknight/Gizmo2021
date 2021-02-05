@@ -14,7 +14,7 @@
 
 **Notes:** This task was fairly simple. Although fiddly, the desired result was achieved. <br /> 
 
-**Images/ videos of results:**
+**Videos of results:** 
 
 
 ## Task 2 - Controlling servos
@@ -25,7 +25,11 @@
 
 **Notes:** This task was fairly simple and only required the changing of a couple of numbers and the removal of certain sections of code. <br />
 
-**Images/ videos of results:** 
+**Videos of results:** 
+
+<img src="servo_setup.jpg"
+     alt="Setup of servo"
+     />
 
 ## Task 3 - Controlling DC motors
 
@@ -41,4 +45,4 @@ However, when the code was linked to the motor, nothing seemed to happen. After 
 
 **Further improvements:** I would like to edit my code so that it can take any user input, not only 3 digit numbers requiring 0s as placeholders. This would create a better user interface and have broader applications. 
 
-**Images/ videos of results:** 
+**Videos of results:** 
