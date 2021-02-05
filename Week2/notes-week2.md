@@ -14,7 +14,9 @@
 
 **Notes:** This task was fairly simple. Although fiddly, the desired result was achieved. <br /> 
 
-**Videos of results:** 
+**Videos of results:** Two videos of looping through all the colours using an RGB LED: 
+1. https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week2/looping_every_colour.mp4 
+2. https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week2/looping_every_colour2.mp4 
 
 
 ## Task 2 - Controlling servos
@@ -25,7 +27,9 @@
 
 **Notes:** This task was fairly simple and only required the changing of a couple of numbers and the removal of certain sections of code. <br />
 
-**Videos of results:** 
+**Videos of results:** Testing the servo: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week2/servo_practice.mp4 <br />
+
+Making the servo go from horizontal to vertical: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week2/servo_H_to_V.mp4 <br />
 
 <img src="servo_setup.jpg"
      alt="Setup of servo"
@@ -45,4 +49,7 @@ However, when the code was linked to the motor, nothing seemed to happen. After 
 
 **Further improvements:** I would like to edit my code so that it can take any user input, not only 3 digit numbers requiring 0s as placeholders. This would create a better user interface and have broader applications. 
 
-**Videos of results:** 
+**Videos of results:** Initial testing of the motor: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week2/fan_random.mp4 <br />
+
+User inputting speed to motor: _motor broke before I could video this!_
+
