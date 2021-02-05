@@ -1,4 +1,4 @@
-# Notes week 2
+# Notes week 2 - Controlling motors and other actuators
 
 ## Task 1
 

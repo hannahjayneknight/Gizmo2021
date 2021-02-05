@@ -1,4 +1,4 @@
-# Notes week 3
+# Notes week 3 - Working with sensors
 
 ## Task 1
 

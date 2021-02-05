@@ -2,18 +2,17 @@
 
 A repository containing my solutions to all the tutorials and my final project for this module.
 
-## Tutorials
-**Week 1** <br />
+## Week 1 - Exploring Arduino and the starter kit
 Simple exercises to get used to using the arduino environment. Exercises involved using LEDs, a keypad and the serial monitor. <br />
 
 No notes for this week yet.
 
-**Week 2** <br />
+## Week 2 - Controlling motors and other actuators
 More simple exercises to get used to using the arduino environment. Exercises involved using an RBG LED, a servo motor and a DC motor.
 
 No notes for this week yet.
 
-**Week 3** <br />
+## Week 3 - Working with sensors
 Task 1 - Using the sound sensor to detect my voice and light up the RGB different colours depending on the pressure measured. <br />
 
 Task 2 - Calibrating the sound sensor to the user. <br />
