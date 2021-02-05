@@ -1,6 +1,6 @@
 # Notes week 3 - Working with sensors
 
-## Task 1
+## Task 1 - Plotting sensor values (using the sound sensor)
 
 **Files**  sine_wave.ino, Sound_Sensor_Example_NR.ino, Task1.ino <br />
 
@@ -49,7 +49,8 @@ Overall, this task was quite challenging and difficult to measure how successful
 
 **Notes on the ranges I used** Whilst these ranges may be acceptable for my voice, they may not be for another user. To solve this problem, the sensor can be callibrated: https://www.arduino.cc/en/Tutorial/BuiltInExamples/Calibration. This technique was implemented in Task 2. <br />
 
-## Task 2
+
+## Task 2 - Calibrating sensors (using the sound sensor)
 
 **Files** Task2.ino <br />
 
@@ -63,6 +64,10 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 ```
+
+**Videos of results:**  Setup of the system: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week3/blowing-sound-sensor-and-setup.mp4 <br />
+
+Blowing into the sensor and seeing the change in colour: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week3/blowing-sound-sensor.mp4 
 
 ## Task 3
 
