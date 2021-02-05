@@ -76,7 +76,7 @@ void loop(){
 
   }
 
-  if ( 580 < analogValue < 584) {
+  if ( 579 < analogValue < 582) {
       redValue = 175;
       greenValue = 70;
       analogWrite(RED, redValue);
