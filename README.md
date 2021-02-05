@@ -3,9 +3,9 @@
 A repository containing my solutions to all the tutorials and my final project for this module.
 
 ## Week 1 - Exploring Arduino and the starter kit
-Simple exercises to get used to using the arduino environment. Exercises involved using LEDs, a keypad and the serial monitor. <br />
+Simple exercises to get used to using the arduino environment. Exercises involved using LEDs, resisors, a potentiometer, an RGB LED and a keypad and the serial monitor. <br />
 
-No notes for this week yet.
+Notes for this week: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week1/notes-week1.md 
 
 ## Week 2 - Controlling motors and other actuators
 **Task 1:** Controlling the colours emitted by an RGB. <br />
