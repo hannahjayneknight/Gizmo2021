@@ -39,3 +39,18 @@ Here, different functions are made both for the red LED and the tilt sensor. The
 
 <br />
 
+At first, when I followed the set-up outlined in the lesson, my stepper motor did not turn on.
+
+## Task 3 - Attending events when they happen
+
+**Files** Interrupts.ino <br />
+
+When we first combined the red LED with the tilt sensor, the system didn't work the way we wanted to because of _polling_. This is where the computer waits for an external device to check for its readiness or state and does nothing until this device is ready. <br />
+
+In this exercise, we use _interrupts_ which are signals sent from a device or from software to the operating system. The interrupt signal causes the operating system to temporarily stop what it is doing and ‘service’ the interrupt. This allows the system to run specific pieces of code called _Interrupt Service Routines (or ISRs)_. <br />
+
+The Arduino function ```attachInterrupt()``` allows us to do this easily. 
+
+**Breakdown of _Interrupts.ino_ :** In the loop() of _Interrupts.ino_, you have the redLED blinking. The tilt sensor is only defined in setup() where the interrupt is defined which links to the builtin() function to define what to do depending on the signal from the tilt sensor. The builtin() function is the interrupt handler (aka ISR) which means it tells the computer what to do when the device raises an interrupt. <br />
+
+When we define the interrupt in setup(), we tell the computer that whenever the state of the tilt sensor changes it needs to perform the builtin() function (which is the ISR).
