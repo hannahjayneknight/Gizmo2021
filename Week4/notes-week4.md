@@ -2,7 +2,7 @@
 
 ## Task 1 - Reacting to changes in orientation
 
-**Files**   <br />
+**Files** Ball_Switch.ino, Task1.ino, Task1-attempt2.ino<br />
 
 Firstly, a simple circuit was set-up to try using the tilt sensor. This all ran smoothly. <br />
 
@@ -24,9 +24,18 @@ The solution has been based on the following article: https://arduino.stackexcha
 
 Here, different functions are made both for the red LED and the tilt sensor. The tilt sensor function does exactly the same as it did before and the red LED function no longer uses ```delay()``` methods. Instead, each time the led function is called it checks for how much time has passed since the previous time it was called. The result can be seen in the _Task1-attempt2.ino_ file. <br />
 
-Video of tilt sensor working on its own: <br />
+**Video of tilt sensor working on its own:** <br />
 
-Video of tilt sensor and LED working together: <br />
+**Video of tilt sensor and LED working together:** <br />
 
+## Task 2 - Controlling a stepper motor
 
+**Files** Ball_Switch.ino, Task1.ino, Task1-attempt2.ino<br />
+
+**About the stepper motor:** 
+- The sequence of the applied pulses is directly related to the direction of the motor shaft's rotation.
+- The speed of the motor shafts rotation is directly related to the frequency of the input pulses. 
+- The length of rotation is directly related to the number of input pulses.
+
+<br />
 
