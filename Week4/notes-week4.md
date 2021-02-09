@@ -24,22 +24,42 @@ The solution has been based on the following article: https://arduino.stackexcha
 
 Here, different functions are made both for the red LED and the tilt sensor. The tilt sensor function does exactly the same as it did before and the red LED function no longer uses ```delay()``` methods. Instead, each time the led function is called it checks for how much time has passed since the previous time it was called. The result can be seen in the _Task1-attempt2.ino_ file. <br />
 
-**Video of tilt sensor working on its own:** <br />
+**Video of tilt sensor working on its own:** https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week4/tilt-sensor.mp4 <br />
 
-**Video of tilt sensor and LED working together:** <br />
+**Video of tilt sensor and LED working together:** https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week4/tilt_and_LED.mp4 <br />
 
 ## Task 2 - Controlling a stepper motor
 
-**Files** Ball_Switch.ino, Task1.ino, Task1-attempt2.ino<br />
+**Files** stepper_Example.ino, <br />
 
 **About the stepper motor:** 
 - The sequence of the applied pulses is directly related to the direction of the motor shaft's rotation.
 - The speed of the motor shafts rotation is directly related to the frequency of the input pulses. 
-- The length of rotation is directly related to the number of input pulses.
+- The length of rotation is directly related to the number of input pulses. <br />
 
-<br />
+<img src="stepper_setup.jpg" alt="Stepper motor setup"/>
 
-At first, when I followed the set-up outlined in the lesson, my stepper motor did not turn on.
+At first, when I followed the set-up outlined in the lesson, my stepper motor did not turn on at all. I realised it was missing a wire from the 5V pin on the Arduino to the breadboard. I added this in, but still, no luck. I tried connecting the power supply to various terminals wondering if I got that completely wrong. Still, no luck. Out of desperation, I plugged the Arduino into my laptop, which dutifully complained about the power demand from it and decided to stop supplying power completely. I decided to restart my laptop, leave it for a while then come back. <br />
+
+I was worried I had broken my motor (like last week!) so decided to slowly build up the circuit before adding in the motor. When I was confident in my circuit, I added in the motor and this time there was noise (yay!) but, the motor didn't appear to be moving. <br />
+
+After some fiddling, in the end all that was needed was for _both_ of the output voltages on the power supply module to be set to 5V. This gave the desired result.
+
+<img src="stepper_output_pins.jpg" alt="Output pins for stepper motor"/>
+
+**Video of stepper motor exercise:**  <br />
+
+To change the rotation to half rotations, the variable ```stepsPerRevolution``` was simply halved.
+
+For Task 2, the stepper motor was coded to increase speed from 5 rpm, to 10 rpm to 15 rpm with each full rotation and then go back to 5 rpm again. <br />
+
+Note that the starting position was not controlled during this task. Whatever is the motor's initial starting position will be the starting position.
+
+The serial port was used to ensure the speed of the stepper motor:
+
+<img src="serial-port-task2.jpg" alt="Stepper motor speeds printed on serial port"/>
+
+**Video of Task 2:**  <br />
 
 ## Task 3 - Attending events when they happen
 
