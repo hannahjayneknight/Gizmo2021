@@ -47,7 +47,7 @@ After some fiddling, in the end all that was needed was for _both_ of the output
 
 <img src="stepper_output_pins.jpg" alt="Output pins for stepper motor"/>
 
-**Video of stepper motor exercise:**  <br />
+**Video of stepper motor exercise:**  https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week4/stepper_Exercise.mp4 <br />
 
 To change the rotation to half rotations, the variable ```stepsPerRevolution``` was simply halved.
 
@@ -74,3 +74,7 @@ The Arduino function ```attachInterrupt()``` allows us to do this easily.
 **Breakdown of _Interrupts.ino_ :** In the loop() of _Interrupts.ino_, you have the redLED blinking. The tilt sensor is only defined in setup() where the interrupt is defined which links to the builtin() function to define what to do depending on the signal from the tilt sensor. The builtin() function is the interrupt handler (aka ISR) which means it tells the computer what to do when the device raises an interrupt. <br />
 
 When we define the interrupt in setup(), we tell the computer that whenever the state of the tilt sensor changes it needs to perform the builtin() function (which is the ISR).
+
+**Task 3:** In this task, we combine the step motor with the tilt sensor and use interrupts to stop the motion of the motor when the sensor is vertical. The motor is not intended to turn back on again when the sensor returns to horizontal, although the line of code that would do this is commented out of the sketch for future reference.
+
+**Video of Task 3:**  <br />
