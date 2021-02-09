@@ -28,11 +28,11 @@ Notes for this week: https://github.com/hannahjayneknight/Gizmo2021/blob/main/We
 ## Week 4 - Dealing with a concurrent physical world
 **Task 1:**  Using a title sensor to react to changes in orientation whilst simultaneously having an LED blink. <br />
 
-**Task 2:** Controlling a stepper motor. <br />
+**Task 2:** Controlling a stepper motor by changin its position and speed. <br />
 
-**Task 3:**  <br />
+**Task 3:**  Using interrupts to complete tasks simultaneously. Using the tilt sensor with either a red LED or the step motor. <br />
 
-Notes for this week: 
+Notes for this week: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week4/notes-week4.md
 
 ## Final Project
 The project brief can be found in the file _2021 DE2-Gizmo Project brief-v1.0.pdf_

@@ -59,7 +59,7 @@ The serial port was used to ensure the speed of the stepper motor:
 
 <img src="serial-port-task2.jpg" alt="Stepper motor speeds printed on serial port"/>
 
-**Video of Task 2:**  <br />
+**Video of Task 2:** https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week4/Task2.mp4 <br />
 
 ## Task 3 - Attending events when they happen
 
@@ -77,4 +77,4 @@ When we define the interrupt in setup(), we tell the computer that whenever the 
 
 **Task 3:** In this task, we combine the step motor with the tilt sensor and use interrupts to stop the motion of the motor when the sensor is vertical. The motor is not intended to turn back on again when the sensor returns to horizontal, although the line of code that would do this is commented out of the sketch for future reference.
 
-**Video of Task 3:**  <br />
+**Video of Task 3:** https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week4/Task3.mp4 <br />
