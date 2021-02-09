@@ -6,9 +6,7 @@
 
 Sometimes, the wavefrom produced from the sound sensor output wasn't perfect.
 
-<img src="squiggly-lines.jpg"
-     alt="An unperfect waveform from the sound sensor"
-     />
+<img src="squiggly-lines.jpg" alt="An unperfect waveform from the sound sensor"/>
 
 The following helped get the perfect sound waveform using the sound sensor (i.e. no noise and detects speech not just sharp blows):
  - Adjust screw on sound sensor until LED2 just goes out. 

@@ -25,5 +25,14 @@ Notes for this week: https://github.com/hannahjayneknight/Gizmo2021/blob/main/We
 
 Notes for this week: https://github.com/hannahjayneknight/Gizmo2021/blob/main/Week3/notes-week3.md
 
+## Week 4 - Dealing with a concurrent physical world
+**Task 1:**  Using a title sensor to react to changes in orientation. <br />
+
+**Task 2:** <br />
+
+**Task 3:**  <br />
+
+Notes for this week: 
+
 ## Final Project
 The project brief can be found in the file _2021 DE2-Gizmo Project brief-v1.0.pdf_
